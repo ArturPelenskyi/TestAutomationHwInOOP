@@ -4,15 +4,57 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 	    User user = new User();
-	    user.setC1();
-	    user.setC2();
-	    user.setC3();
+	    try {
+			user.setC1();
+		}catch (IOException e)
+		{
+			System.out.println("Source doesn't exist!");
+		}catch (NumberFormatException e){
+	    	System.out.println("Not a number!");
+		}
 
-	    user.setT1();
-	    user.setT2();
-	    user.setT3();
+	    try {
+			user.setC2();
+		}catch (IOException e)
+		{
+			System.out.println("Source doesn't exist!");
+		}catch (NumberFormatException e) {
+	    	System.out.println("Not a number!");
+		}
+	    try {
+			user.setC3();
+		}catch (IOException e)
+		{
+			System.out.println("Source doesn't exist!");
+		}catch (NumberFormatException e){
+			System.out.println("Not a number!");
+		}
+		try {
+			user.setT1();
+		}catch (IOException e)
+		{
+			System.out.println("Source doesn't exist!");
+		}catch (NumberFormatException e){
+			System.out.println("Not a number!");
+		}
+		try {
+			user.setT2();
+		}catch (IOException e)
+		{
+			System.out.println("Source doesn't exist!");
+		}catch (NumberFormatException e){
+			System.out.println("Not a number!");
+		}
+		try {
+			user.setT3();
+		}catch (IOException e)
+		{
+			System.out.println("Source doesn't exist!");
+		}catch (NumberFormatException e){
+			System.out.println("Not a number!");
+		}
 
 	    user.Counting();
 
