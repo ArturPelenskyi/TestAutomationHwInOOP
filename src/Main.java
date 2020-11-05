@@ -18,45 +18,45 @@ public class Main {
              a = Double.parseDouble(br.readLine());
         }catch (IOException e)
         {
-            System.err.println("Source doesn't exist");
+            System.out.println("Source doesn't exist");
         }catch (NumberFormatException e) {
-            System.err.println("Not a number");
+            System.out.println("Not a number");
         }
         try {
             System.out.print("b:");
             b = Double.parseDouble(br.readLine());
         }catch (IOException e)
         {
-            System.err.println("Source doesn't exist");
+            System.out.println("Source doesn't exist");
         }catch (NumberFormatException e){
-            System.err.println("Not a number");
+            System.out.println("Not a number");
         }
         try {
             System.out.print("c:");
              c = Double.parseDouble(br.readLine());
         }catch (IOException e)
         {
-            System.err.println("Source doesn't exist");
+            System.out.println("Source doesn't exist");
         }catch (NumberFormatException e){
-            System.err.println("Not a number");
+            System.out.println("Not a number");
         }
         try{
             System.out.print("x:");
              x = Double.parseDouble(br.readLine());
         }catch (IOException e)
         {
-            System.err.println("Source doesn't exist");
+            System.out.println("Source doesn't exist");
         }catch (NumberFormatException e){
-            System.err.println("Not a number");
+            System.out.println("Not a number");
         }
         try{
             System.out.print("y:");
              y = Double.parseDouble(br.readLine());
         }catch (IOException e)
         {
-            System.err.println("Source doesn't exist");
+            System.out.println("Source doesn't exist");
         }catch (NumberFormatException e){
-            System.err.println("Not a number");
+            System.out.println("Not a number");
         }
 
         Brick brick = new Brick(a,b,c);
