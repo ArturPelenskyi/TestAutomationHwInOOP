@@ -3,14 +3,21 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.file.attribute.UserDefinedFileAttributeView;
 
 public class Main {
 
-    public static  void main(String[] args) throws IOException {
+    public static  void main(String[] args)  {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("n:");
-        int  n = Integer.parseInt(br.readLine());
+        int n=0;
+        try {
+            System.out.print("n:");
+             n = Integer.parseInt(br.readLine());
+        }catch (IOException e)
+        {
+            System.out.println("Source doesn't exist!");
+        }catch (NumberFormatException e){
+            System.out.println("Not a number!");
+        }
         User user = new User(n);
         user.ThreeCheck();
         user.NReverseAndReplacementOfTheExtremeNumbers();
