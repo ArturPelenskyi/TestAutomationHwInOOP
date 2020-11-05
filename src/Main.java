@@ -6,20 +6,60 @@ import java.io.InputStreamReader;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        double a = 0;
+        double b = 0;
+        double c = 0;
+        double x = 0;
+        double y = 0;
+        try {
             System.out.print("a:");
-            double a = Double.parseDouble(br.readLine());
+             a = Double.parseDouble(br.readLine());
+        }catch (IOException e)
+        {
+            System.err.println("Source doesn't exist");
+        }catch (NumberFormatException e) {
+            System.err.println("Not a number");
+        }
+        try {
             System.out.print("b:");
-            double b = Double.parseDouble(br.readLine());
+            b = Double.parseDouble(br.readLine());
+        }catch (IOException e)
+        {
+            System.err.println("Source doesn't exist");
+        }catch (NumberFormatException e){
+            System.err.println("Not a number");
+        }
+        try {
             System.out.print("c:");
-            double c = Double.parseDouble(br.readLine());
+             c = Double.parseDouble(br.readLine());
+        }catch (IOException e)
+        {
+            System.err.println("Source doesn't exist");
+        }catch (NumberFormatException e){
+            System.err.println("Not a number");
+        }
+        try{
             System.out.print("x:");
-            double x = Double.parseDouble(br.readLine());
+             x = Double.parseDouble(br.readLine());
+        }catch (IOException e)
+        {
+            System.err.println("Source doesn't exist");
+        }catch (NumberFormatException e){
+            System.err.println("Not a number");
+        }
+        try{
             System.out.print("y:");
-            double y = Double.parseDouble(br.readLine());
-            Brick brick = new Brick(a,b,c);
+             y = Double.parseDouble(br.readLine());
+        }catch (IOException e)
+        {
+            System.err.println("Source doesn't exist");
+        }catch (NumberFormatException e){
+            System.err.println("Not a number");
+        }
+
+        Brick brick = new Brick(a,b,c);
             Hole hole = new Hole(x,y);
 
             if((brick.getA() <= hole.getX() && brick.getB() <= hole.getY()) ||
